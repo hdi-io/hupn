@@ -1,0 +1,43 @@
+<?php
+
+if ( ! class_exists( 'Hdi_Users_Profile_Navigation_Html_View' ) ) {
+	class Hdi_Users_Profile_Navigation_Html_View {
+		public function render_users_profile_navigation( $data_for_navigation ) {
+			?>
+            <h2>
+				<?php _e( 'Users profile navigation', 'users-profile-navigation' ); ?>
+            </h2>
+            <div class='actions'>
+				<?php
+				if ( $data_for_navigation['previous_user_id'] ) {
+					$prev_link = get_edit_user_link( $data_for_navigation['previous_user_id'] );
+					?>
+                    <div><a class="button alignleft hupn-prev"
+                            href='<?= $prev_link; ?>'>&larr; <?php _e( 'Previous', 'users-profile-navigation' ); ?></a>
+                    </div>
+					<?php
+				} else {
+					?>
+                    <div class="alignleft hupn-end-of-users"></div>
+					<?php
+				} ?>
+                <div class="hupn-count alignleft"><?php printf( __( '%1s of %2s', 'users-profile-navigation' ), $data_for_navigation['current_profile_page_user_id'], $data_for_navigation['total_number_of_users'] ); ?></div>
+				<?php
+				if ( $data_for_navigation['next_user_id'] ) {
+					$next_link = get_edit_user_link( $data_for_navigation['next_user_id'] );
+					?>
+                    <div><a class="button hupn-next"
+                            href='<?= $next_link; ?>'><?php _e( 'Next', 'users-profile-navigation' ); ?> &rarr;</a>
+                    </div>
+					<?php
+				} else {
+					?>
+                    <div class="hupn-end-of-users"></div>
+					<?php
+				}
+				?>
+            </div>
+			<?php
+		}
+	}
+}
