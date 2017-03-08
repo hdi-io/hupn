@@ -19,14 +19,14 @@ if ( ! class_exists( 'Hdi_Users_Profile_Navigation_Model' ) ) {
 			$data_for_navigation                            = [];
 
 			$data_for_navigation['current_profile_page_user_id'] = $this->profile_page_user_id;
-			$data_for_navigation['previous_user_id']             = $this->get_profile_page_users_id( $query_string_for_previous_profile_page_user_id );
-			$data_for_navigation['next_user_id']                 = $this->get_profile_page_users_id( $query_string_for_next_profile_page_user_id );
+			$data_for_navigation['previous_user_id'] = $this->get_profile_page_users_id_from_query( $query_string_for_previous_profile_page_user_id );
+			$data_for_navigation['next_user_id'] = $this->get_profile_page_users_id_from_query( $query_string_for_next_profile_page_user_id );
 			$data_for_navigation['total_number_of_users']        = $this->total_number_of_users;
 
 			return $data_for_navigation;
 		}
 
-		private function get_profile_page_users_id( $query_string_for_profile_page_user_id ) {
+		private function get_profile_page_users_id_from_query( $query_string_for_profile_page_user_id ) {
 			global $wpdb;
 			$query_result = $wpdb->get_results( $query_string_for_profile_page_user_id );
 			if ( count( $query_result ) == 1 ) {
