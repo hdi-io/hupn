@@ -3,6 +3,7 @@ if ( ! class_exists( 'Hdi_Users_Profile_Navigation_Controller' ) ) {
 
 	class Hdi_Users_Profile_Navigation_Controller {
 		public function init() {
+			add_action( "plugins_loaded", array( $this, "load_textdomain" ) );
 			add_action( "edit_user_profile", array( $this, "show_users_profile_navigation" ), 100 );
 			add_action( "admin_enqueue_scripts", array( $this, "register_plugin_styles" ) );
 		}
@@ -18,6 +19,10 @@ if ( ! class_exists( 'Hdi_Users_Profile_Navigation_Controller' ) ) {
 		public function register_plugin_styles() {
 			wp_register_style( 'hdi_users_nav', plugins_url( 'users-profile-navigation/assets/style.css' ) );
 			wp_enqueue_style( 'hdi_users_nav' );
+		}
+
+		public function load_textdomain() {
+			load_plugin_textdomain( 'users-profile-navigation', false, "users-profile-navigation/languages" );
 		}
 	}
 

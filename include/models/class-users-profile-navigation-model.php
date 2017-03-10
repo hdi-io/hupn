@@ -32,7 +32,7 @@ if ( ! class_exists( 'Hdi_Users_Profile_Navigation_Model' ) ) {
 			if ( count( $query_result ) == 1 ) {
 				$profile_page_users_id = $query_result[0]->ID;
 			} else {
-				$profile_page_users_id = '';
+				$profile_page_users_id = null;
 			}
 
 			return $profile_page_users_id;
