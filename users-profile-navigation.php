@@ -5,7 +5,7 @@
  * Plugin URI: http://hdi.io/wp-plugins/hupn
  * Description: Users Profiles Navigation.
  * Version: 0.9.0
- * Author: Sanya Kuzovlev
+ * Author: HDI
  * Author URI: http://hdi.io/
  * Text Domain: users-profile-navigation
  * Domain Path: /languages/
@@ -23,6 +23,8 @@
  * along with Users Profile Navigation. If not, see <http://www.gnu.org/licenses/>.
  */
 
-require_once( 'include/class-users-profile-navigation-controller.php' );
+namespace Hdi\Users_Profile_Navigation;
+
+require_once( 'include/class-users-profile-navigation-main.php' );
 
 ?>
