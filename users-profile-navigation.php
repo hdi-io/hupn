@@ -4,7 +4,7 @@
  * Plugin Name: Users Profile Navigation
  * Plugin URI: https://github.com/hdi-io/hupn
  * Description: Users profile navigation.
- * Version: 0.9.5
+ * Version: 0.9.6
  * Author: HDI
  * Author URI: http://hdi.io/
  * Text Domain: users-profile-navigation
