@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Users Profile Navigation 0.9.0\n"
-"POT-Creation-Date: 2017-03-08 17:06+0300\n"
+"POT-Creation-Date: 2017-03-24 10:08+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Sanya Kuzovlev <hi@hdi.io>\n"
 "Language-Team: HDI <hi@hdi.io>\n"
@@ -13,14 +13,13 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
-"X-Poedit-Basepath: ../\n"
+"X-Poedit-Basepath: ..\n"
 "Language: en_US\n"
 "X-Generator: Poedit 1.8.12\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: include/views/class-users-profile-navigation-html-view.php:8
-msgid ""
-"Users profile navigation"
+msgid "Users profile navigation"
 msgstr ""
 
 #: include/views/class-users-profile-navigation-html-view.php:16
@@ -29,7 +28,7 @@ msgstr ""
 
 #: include/views/class-users-profile-navigation-html-view.php:24
 #, php-format
-msgid "%1s of %2s"
+msgid "%1s of %2s, User ID: %3s"
 msgstr ""
 
 #: include/views/class-users-profile-navigation-html-view.php:30
